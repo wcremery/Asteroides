@@ -15,8 +15,53 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ship.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Asteroides.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Coordinates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\explosion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\missile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\vaisseau.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\accueil.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\asteroide.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\explosion.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="resources\laser.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ship.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coordinates.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

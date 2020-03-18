@@ -2,26 +2,34 @@
 //
 
 #include <SFML/Graphics.hpp>
+#include "Ship.hpp"
+
+constexpr int WINDOW_WIDTH{ 800 };
+constexpr int WINDOW_HEIGHT{ 600 };
 
 int main()
 {
-	sf::RenderWindow window{ sf::VideoMode{800, 600}, "Asteroids game !" };
+	sf::RenderWindow window{ sf::VideoMode{WINDOW_WIDTH, WINDOW_HEIGHT}, "Asteroids game !" };
+	Coordinates::initiateSpace(WINDOW_WIDTH, WINDOW_HEIGHT);
+	auto ship = Ship{ sf::Color{255,255,255 } };
+	auto chrono = sf::Clock{};
+
 	while (window.isOpen())
 	{
-		auto event = sf::Event{};
-		auto circle = sf::CircleShape{100};
+		auto event = sf::Event{};		
 
-		circle.setFillColor(sf::Color::Red);
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 			{
 				window.close();
-			}
+			}			
 		}
 		
-		window.clear(sf::Color::Black);
-		window.draw(circle);
+		ship.UpdateState();
+		ship.UpdatePos(chrono.restart().asSeconds());
+		window.clear();
+		ship.Print(window);
 		window.display();
 	}
 	return 0;

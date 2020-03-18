@@ -154,6 +154,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Asteroides.cpp" />
+    <ClCompile Include="Coordinates.cpp" />
+    <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Vector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coordinates.hpp" />
+    <ClInclude Include="Ship.hpp" />
+    <ClInclude Include="Vector.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\accueil.png" />
+    <Image Include="resources\asteroide.png" />
+    <Image Include="resources\explosion.png" />
+    <Image Include="resources\missile.png" />
+    <Image Include="resources\vaisseau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\explosion.wav" />
+    <Media Include="resources\laser.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
